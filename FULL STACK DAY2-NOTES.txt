@@ -1,0 +1,422 @@
+JAVASCRIPT:
+
+
+ IF,IF ELSE,NESTED IF
+ if num %3 then print hi, num%5 print hello , num%3 and%5 print hi hello 
+ print using only two console 
+---------------------------
+ let a=15
+if(a%3==0 &&a%5==0)
+{
+    console.log("hi hello")
+}
+else if(a%5==0)
+{
+    console.log("Hello")
+}
+else if(a%3==0){
+    console.log("Hi")
+}
+------------------------------------
+ let a=15
+if(a%3==0)
+{
+    console.log("hi")
+}
+if(a%5==0)
+{
+    console.log("Hello")
+}
+ OP: hi hello
+-------------------------------------------
+SWITCH: 
+let c=2
+switch(c){
+    case 1:
+        console.log("hi")
+        break;
+    case 2:
+        console.log("hello")
+    case 3:
+        console.log("weelcome")
+}
+
+in this no break is given in case2,3 and no default - no error in this case
+if no break identified then until it reaches another break it executes all case 2,3 
+
+OP of this code is : hello welcome 
+--------------------------------------------
+LOOPS 
+	for,while,do while
+	for,while-entry check loop
+	do while- exit check loop
+	
+for(;;)
+ console.log(a)
+OP: a prints infinite times
+----------------------------------------------
+let  a=1
+for(console.log('a');a<=3;console.log('b')){
+    console.log('c');
+    a++;
+}
+
+OP: a,c,b,c,b,c,b
+in for 1.initialization,2.condition,3.statement,4.increament
+---------------------
+while(){
+}
+OP: error
+--------------------------------------------------------
+FUNCTIONS:
+
+TYPES-parameterized,non parameterized
+
+----------------------------------------
+non parameter without return
+
+function apple(){
+console.log("adASD")
+}
+apple();
+
+non parameter with return 
+
+function apple(){
+let a="orange";
+return a;	or return "orange";
+}
+letb=apple();   
+console.log(b)  or console.log(orange());
+-------------------------------------------------------
+parameterized 
+function apple(1,2){
+	console.log(a+b)
+}
+apple(1,2)
+------------------------------------------------------
+ARROW FUNCTION
+
+
+	let apple=() =>{
+	console.log("hello")
+        }
+        apple()
+-----------------------
+let appple=()=> console.log("hello") - if one line so no braces required
+-------------------------------------------------
+let orange=()=> "orange"-"orange" is return statement
+console.log(orange());
+OP: orange is printed
+---------------------------------------------------
+let banana=()=>{
+	console.log("Nandhini");
+	return 3+3;
+}
+banana()-only Nandhini is printed
+console.log(banana()) -OP:Nandhini 6 is printed
+---------------------------------------------------------------
+SPREAD:
+//spread operaor (...)
+let a=[1,2,3,4]
+let b=[...a];
+console.log(b);OP: 1 2 3 4 
+console.log(b[1])-OP:2
+
+b[2]=10;
+console.log(a)
+here value of index 2 in b is chaanged and while printing a we get 1 2 3 4 becoz changing b doesnt change a 
+------------------------------------------------------------------
+without spread
+let a=[1,2,3,4]
+let b=a;
+b[1]=10;
+console.log(a)-WITHOUT USING SPREAD IT OVERWRITES THE VALUE
+OP: 1,10,3,4
+-----------------------------------------------------
+let a=10
+function x(){
+a=20;
+console.log(a);
+}
+x()
+console.log(a);- OP:20 20 eeven let is used it is declared out of function so its value is also changed to 20 so 20 20
+-----------------------------------------------------------------
+let a=10
+b=a
+b=20
+console.log(a)
+OP: 10 - a doesn't change becoz b assigns only value of a not the address of a so it doesn't change value of a
+-------------------------------------------------------------------
+let a=[1,2,3,4]
+let b=a;
+b[1]=10;
+console.log(a)
+OP: 1,10,3,4
+its becoz if we assign array to another variable it shares the address of a to b so if we change b it also change  a 
+------------------------------------------------------------------------
+let a=[1,2,3,4,5]
+let x=[1,34,6,77,9,]
+let b=[...a,...x]
+console.log(b);
+-----------------------------------------------------------------
+REST
+
+// // // let a=[1,2,3];
+// // // let b=[1,2,...a];
+// // // console.log(b);
+
+// // // let a=10
+// // // let b=a;
+// // // // here only the values move to the b
+
+// // // let a=[1,2,3];
+// // // let b=a;
+// // // //But here a gives the address of a values to the b so when changes done in the b then a will also changed but the spread operator only changes the values alone not the address
+
+
+// // //Spread and rest operator will be same but it has differnbt
+// //  function spread(x,...values){
+// //     console.log(values);
+// //  }
+// //  spread(1,2,3,4);
+// //  x will take the first value alone 1
+
+// // let obj1={
+// //     values:1,
+// //     value:2
+// // };
+// // console.log(...Object.entries(obj1));
+// // console.log(...Object.values(obj1)); or can be done by copying to another variabke
+// // h={...obj1}
+--------------------------------------------------------------------------------------------------
+DESTRUCTURING
+
+// //Destructing Operator where destructing and given to others
+// // let a=[1,5,7,8,9];
+// // let [b,c,x,...y]=a;
+// // console.log(x);
+// // console.log(y);
+
+// // b will be 1
+// // c =5
+// // x=7
+// // and y=8,9
+// // Spread used for spreading of all values but rest combine the values same for destructing like rest
+
+// let a={
+//     name:"to",
+//     age:19,
+//     state:21
+
+// };
+// let {name,age}=a;
+// console.log(age);
+// the values defined the object should be defined here no any other values should be defined here
+
+-------------------------------------------------------------------------------
+
+CALLBACK
+
+function a1(){
+}
+function a2(){
+}
+a1()
+a2()
+------------------------------
+function a1(){
+	setTimeout(()=>{
+	console.log("a1");
+	},1000)
+	}
+}
+function a2(){
+console.log("a1");
+}
+a1()
+a2()
+
+here after a2 a1 will be executed becoz of timer but we neer to execute a1 and then a2 . therefore we use callback to sync order 
+
+
+ function dog(callback){
+  setTimeout(()=>{
+	console.log("jack the dog");
+	callback();
+	),2000);
+}
+function cat(){
+	console.log("rose the cat");
+}
+dog(cat)
+---------------------------------
+function attendance(callback){
+    setTimeout(()=>{
+      console.log("attendance present");
+      callback();
+    },1500);
+  }
+  function lunch(callback){
+    setTimeout(()=>{
+      console.log("had lunch");
+      callback();
+    },1500);
+  }
+  function goinghome(callback){
+    setTimeout(()=>{
+      console.log("boarded the bus");
+      callback();
+    },1500);
+  }
+  // call back hell-calling functon inside functions
+  attendance(()=>{
+      lunch(()=>{
+         goinghome(()=>{
+          console.log("day complete")
+          })
+          })
+      })
+------------------------------------------------------------
+PROMISE 
+
+to overcome callback hell promise is used - promise chaining and promise all 
+promise chaining chains functions one by one
+promise all means output gives after all functions works out 
+----------------------------
+function a1(){
+	return new Promise((resolve,reject)=>{
+		let datas=true;
+		if (datas)
+			resolve("data a1 returned");
+		else
+			reject("data a1 never return");
+		})
+	}
+function a2(){
+	return new Promise((resolve,reject)=>{
+		let datas=true;
+		if (datas)
+			resolve("data  a2 returned");
+		else
+			reject("data a2 never return");
+		})
+	}
+function a3(){
+	return new Promise((resolve,reject)=>{
+		let datas=true;
+		if (datas)
+			resolve("data a3 returned");
+		else
+			reject("data a3 never return");
+		})
+	}
+//for promise chaining use then
+//promise surely returns some output so (return new Promise) used
+	a1().then((output)=>{console.log(output);a2()})
+	    .then((output)=>{console.log(output);a3()})
+	    .then((output)=>{console.log(output)})
+	     .catch((output)=>{console.error(output)})// console.error prints output in red colour 
+
+for promise all use destructurring concept 
+
+ async function dog(){
+	try{
+	  let[x,y,z]=await Promise.all([a1(),a2(),a3()]);
+	  console.log(x);
+	  console.log(y);
+	  console.log(z);
+	  }catch(error){
+		console.error(error);
+	   }
+	  }
+dog();
+----------------------------------------------------------------------------
+function attendnance(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            let ap=true;
+            if(ap){
+                resolve("App");
+            }
+            else{
+                reject("NoPP");
+            }
+        },1500)
+    })
+}
+
+function brain(){
+    return new Promise((resolve,reject)=>{
+        let h=true;
+        if(h){
+            resolve("Your Brain Promised Me");
+        }
+        else{
+            reject("You Rejected");
+        }
+    })
+}
+
+brain().then((op)=>{console.log(op); return attendnance();})
+.then((op)=>{console.log(op);console.log("Hello");})
+.catch((error)=>console.error(error));
+-------------------------------------------------------------------------------------
+ASYNC AWAIT
+
+ not all the function is synchronously execute . async mean it execute asynchronously without considering other functions 
+ await is the key where it waits till the action completes	
+
+
+function attendance(){
+}
+function lunch(){
+}
+function goingtohome(){
+}
+// async function finnalday(){
+// 	let attendances = await attendance();
+// 	console.log(attendances);
+// 	let lun= await lunch();
+// 	console.log(lun);
+// 	let home = await goingtohome();
+// 	console.log(home);
+// }
+
+async function finalday(){
+	try{
+	   let att = await attendance();
+	   console.log(att);
+           const lun = await lunch();
+	   console.log(lun);
+	let home = await goingtohome();
+	   console.log(home);
+	}
+	catch(error){
+	   console.error(error)
+		}
+	}
+finalday()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

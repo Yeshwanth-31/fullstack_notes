@@ -1,0 +1,149 @@
+FULL STACK 
+
+GIT FILE PUSHING 
+stages in pushing into git repo 
+1.cloning
+2.staging
+3.commit
+4.push
+
+   + download git 
+   + open new repository
+   + create a file in d drive 
+   + open folder with git bash 
+   + clone your repo link into file (git clone "https://github.com/Yeshwanth-31/Fullstack.git")
+   + change dir (cd Fullstack)
+   + create 2 files (touch file.txt)
+   + git status - for checking status of the directory
+   + git add .
+   + commit the change (git commit -m "txtchange")
+   + if error occurs give authorization
+     (git config --global user.email "yeshwanthm3105@gmail.com", 
+      git config --global user.name "Yeshwanth-31")
+   + To push the files into repository (git push -u origin main) pushing into main branch 
+   + create branch (git branch newbranch)
+   + change to new branch (git checkout newbranch)
+   + create new file for this branch (touch file3.txt)
+   + add file (git add .)
+   + check status if u need 
+   + now commit changes (git commit -m "newbranch")
+   + push the file (git push -u origin newbranch )
+   + go to browser and give " compare and pull request "- to request pull request 
+   + merge the pull requests and file added into main branch
+
+  To change friend's repo - goto settings-> add collaborator->add people(add mail/username)
+  
+
+JAVASCRIPT 
+	declaration types
+	1.const-Unchanged
+	2.var-globally scoped
+	2.let-locally scoped
+
+ function:
+    function a(){
+        if(true){
+            var a=5;
+            console.log(a);
+        }
+        console.log(a);
+    }
+    a()
+
+ console.log(a)
+ var a=5;
+  OP: undefined , coz var is globally defined then it knows that a is a variable and it doesn't know its value so- undefined
+
+console.log(a)
+ let a=5;
+OP: error, coz let is locally defined 
+
+let a=5:
+let a=3:
+console.log(a)
+OP: error, coz js dont allow redeclaration but we can reinitialize
+
+let a=5:
+a=3:
+console.log(a)
+OP: 3 , becoz we can reinitialize
+
+CONST a=5:
+a=3:
+console.log(a)
+OP: CONST is unchangeable , so it cant be reinitialized
+
+DATATYPES:
+	number
+	Boolean
+	string
+	bigint - let a=1334532432345345n(last n)/let a=BigInt(123434);
+	object - key-value pair with diff datatypes. To print -console.log(student1)
+	         let student1={ 
+	                name : {"axse","rahul},
+			age : 20,
+			isstudent : true,
+			address : {
+			   state : "TN",
+			   city : "perundurai"
+			},
+			hello : function(){
+			     console.log("hi students")
+			     console.log("hi teachers")
+			}
+			}
+		student.hello();
+                 console.log(student1.name);
+ 		 console.log(student1.address.state);-TN
+		 connsole.log(student1["name"]);-another method 
+                
+               let sud=new object(); 
+               stud.name="abi";
+               stud.age=20;
+               stud.hello = function{
+               console.log("hi");
+ 	       }		 
+ 		stud.hello();-to call function
+ 		console.log(stud);-to print object
+
+OPERATORS:
+	unary-
+	binary-
+	ternary-
+arithmetic operator 
+	add,sub.mul,div,mod,exponentation-2**3=8,increment,decrement
+comparison operator
+	equalto - == (5=="5" -true)
+	strict equal  - ===(5==="5" - false)
+        strict not equal - 5!=="5" - true
+	greater than
+	less than
+	great or eq to 
+	less or equal to 
+logical operator 
+	&&-logical AND
+	||-logical OR 
+	!- logical NOT
+DAY-2:	
+core js:
+	controlflow:conditional statements(if,else)
+	loops:for,while
+	functions and arrow fun
+es6 concepts:
+	spread and destructions and operator
+	ternary operator
+	call backs 
+	promise,async/await
+	DOM manipulation basics
+
+
+
+
+
+
+
+
+
+
+
+
